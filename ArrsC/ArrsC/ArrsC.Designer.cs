@@ -40,6 +40,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.btnF1 = new System.Windows.Forms.Button();
+            this.btnF2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblSum = new System.Windows.Forms.Label();
+            this.btnSum1 = new System.Windows.Forms.Button();
+            this.btnSum2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgArr)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,23 +149,115 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Сохранить";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnLoad
             // 
             this.btnLoad.Location = new System.Drawing.Point(426, 64);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(93, 23);
+            this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 11;
-            this.btnLoad.Text = "Восстановить";
+            this.btnLoad.Text = "Показать";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(266, 167);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Поиск";
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Location = new System.Drawing.Point(269, 193);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(69, 20);
+            this.tbSearch.TabIndex = 13;
+            // 
+            // btnF1
+            // 
+            this.btnF1.Location = new System.Drawing.Point(344, 193);
+            this.btnF1.Name = "btnF1";
+            this.btnF1.Size = new System.Drawing.Size(75, 23);
+            this.btnF1.TabIndex = 14;
+            this.btnF1.Text = "Найти";
+            this.btnF1.UseVisualStyleBackColor = true;
+            this.btnF1.Click += new System.EventHandler(this.btnF1_Click);
+            // 
+            // btnF2
+            // 
+            this.btnF2.Location = new System.Drawing.Point(426, 193);
+            this.btnF2.Name = "btnF2";
+            this.btnF2.Size = new System.Drawing.Size(137, 23);
+            this.btnF2.TabIndex = 15;
+            this.btnF2.Text = "Найти (в упор. массиве)";
+            this.btnF2.UseVisualStyleBackColor = true;
+            this.btnF2.Click += new System.EventHandler(this.btnF2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(269, 231);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Сумма элементов: ";
+            // 
+            // lblSum
+            // 
+            this.lblSum.AutoSize = true;
+            this.lblSum.Location = new System.Drawing.Point(381, 231);
+            this.lblSum.Name = "lblSum";
+            this.lblSum.Size = new System.Drawing.Size(0, 13);
+            this.lblSum.TabIndex = 17;
+            // 
+            // btnSum1
+            // 
+            this.btnSum1.Location = new System.Drawing.Point(264, 276);
+            this.btnSum1.Name = "btnSum1";
+            this.btnSum1.Size = new System.Drawing.Size(75, 23);
+            this.btnSum1.TabIndex = 18;
+            this.btnSum1.Text = "Найти";
+            this.btnSum1.UseVisualStyleBackColor = true;
+            this.btnSum1.Click += new System.EventHandler(this.btnSum1_Click);
+            // 
+            // btnSum2
+            // 
+            this.btnSum2.Location = new System.Drawing.Point(345, 276);
+            this.btnSum2.Name = "btnSum2";
+            this.btnSum2.Size = new System.Drawing.Size(75, 23);
+            this.btnSum2.TabIndex = 19;
+            this.btnSum2.Text = "Найти";
+            this.btnSum2.UseVisualStyleBackColor = true;
+            this.btnSum2.Click += new System.EventHandler(this.btnSum2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(266, 260);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(152, 13);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Без потоков   /   C потоками";
             // 
             // ArrsC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnSum2);
+            this.Controls.Add(this.btnSum1);
+            this.Controls.Add(this.lblSum);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnF2);
+            this.Controls.Add(this.btnF1);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
@@ -191,5 +292,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.Button btnF1;
+        private System.Windows.Forms.Button btnF2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSum;
+        private System.Windows.Forms.Button btnSum1;
+        private System.Windows.Forms.Button btnSum2;
+        private System.Windows.Forms.Label label6;
     }
 }

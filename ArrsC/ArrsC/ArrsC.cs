@@ -21,25 +21,21 @@ namespace ArrsC
         private void btnCreate_Click(object sender, EventArgs e)
         {
             s.Init(tbN.Text, tbB.Text);
-            s.Show(dgArr);
         }
 
         private void btnShell_Click(object sender, EventArgs e)
         {
             s.Shell();
-            s.Show(dgArr);
         }
 
         private void btnBubble_Click(object sender, EventArgs e)
         {
             s.BubbleSort(1);
-            s.Show(dgArr);
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             s.InsertSort();
-            s.Show(dgArr);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -50,6 +46,38 @@ namespace ArrsC
         private void btnLoad_Click(object sender, EventArgs e)
         {
             s.Show(dgArr);
+        }
+
+        private void btnF1_Click(object sender, EventArgs e)
+        {
+            int res = s.FindFirst(tbSearch.Text);
+            if (res != -1)
+                MessageBox.Show(string.Format(@"Индекс элемента {0}", res));
+            else
+                MessageBox.Show("Не найдено");
+        }
+
+        private void btnF2_Click(object sender, EventArgs e)
+        {
+            int res = s.DSearch(tbSearch.Text);
+            if (res != -1)
+                MessageBox.Show(string.Format(@"Индекс элемента {0}", res));
+            else
+                MessageBox.Show("Не найдено");
+        }
+
+        private void btnSum1_Click(object sender, EventArgs e)
+        {
+            String res, _dt;
+            s.SeqSum(out res, out _dt);
+            lblSum.Text = res;
+        }
+
+        private void btnSum2_Click(object sender, EventArgs e)
+        {
+            String res, _dt;
+            s.ParSum(out res, out _dt);
+            lblSum.Text = res;
         }
     }
 }

@@ -29,6 +29,7 @@ namespace ArrsC
             else
                 return false;
         }
+        // выводит A[] в DataGridView
         public void Show(DataGridView _dgArr)
         {
             int i;
@@ -36,6 +37,7 @@ namespace ArrsC
             for (i = 0; i < N; i++)
                 _dgArr.Rows[i].Cells[0].Value = A[i].ToString();
         }
+        // так и не понял зачем и куда. Везде меняется A[] и содержимое gv 
         public bool Save(DataGridView _dgArr)
         {
             int i;
@@ -109,7 +111,7 @@ namespace ArrsC
                 h = h / 2;
             }
         }
-
+        // поиск первого совпадающего с _SI  элемента
         public int FindFirst(string _SI)
         {
             int SI, i, P;
@@ -123,6 +125,8 @@ namespace ArrsC
                         i = i + 1;
             return P;
         }
+
+        // поиск в упорядоченном массиве
         public int DSearch(string _SI)
         {
             int left, middle, right;
@@ -146,7 +150,7 @@ namespace ArrsC
             }
             return -1;
         }
-        // секундомер
+        // сумма элементов с временем выполнения 
         public void SeqSum(out string _s, out string _dt)
         {
             int i, sum;
@@ -159,6 +163,7 @@ namespace ArrsC
             _s = sum.ToString();
             _dt = string.Format(@"Time:{0}", timer.Elapsed);
         }
+        // сумма элементов используя потоки
         public void ParSum(out string _s, out string _dt)
         {
             int i, sum;
